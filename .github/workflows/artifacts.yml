@@ -12,8 +12,8 @@ on:
 
  
 jobs:
-  runs-on: ubuntu-latest
-    example-job:
+  example-job:
+      runs-on: ubuntu-latest
       name: Save output
       steps:
         - shell: bash
