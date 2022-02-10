@@ -24,6 +24,4 @@ jobs:
           First_Name: Mona    
       - name: The job has succeeded
         if: ${{ success() }}
-        run :  echo "${{ env.Mona }}"
-        env:
-          Mona: ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat') }}
+       
