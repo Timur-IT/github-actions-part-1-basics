@@ -19,7 +19,6 @@ jobs:
       - name: "Say Hello Mona it's Monday"
         if: ${{ env.DAY_OF_WEEK == 'Monday' }}
         run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
-      - name: Mona the Octocat
-        run: format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat')
         env:
           First_Name: Mona
+          Mona: format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat')
