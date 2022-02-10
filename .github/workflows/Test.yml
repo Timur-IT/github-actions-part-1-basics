@@ -26,12 +26,16 @@ jobs:
         if: ${{ success() }}
         run : | 
            echo "${{ env.Mona }}"
-           echo "${{ fruits.*.name }}"
         env:
           Mona: ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat') }}
-        [
-         { "name": "apple", "quantity": 1 },
-         { "name": "orange", "quantity": 2 },
-         { "name": "pear", "quantity": 1 }
-        ]  
+      - name: Filter
+        run : 
+          echo "${{ fruits.*.name }}"
+        env:
+          fruits:
+          [
+            { "name": "apple", "quantity": 1 },
+            { "name": "orange", "quantity": 2 },
+            { "name": "pear", "quantity": 1 }
+          ]  
        
