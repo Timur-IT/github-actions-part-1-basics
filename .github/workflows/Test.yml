@@ -30,12 +30,12 @@ jobs:
           Mona: ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat') }}
       - name: Filter
         run : 
-          echo "${{ fruits.*.name }}"
+          echo "${{ 'fruits.*.name' }}"
         env:
           fruits:
                ${{ 
-                    '{ "name":"apple", "quantity":1 },
+                    { "name":"apple", "quantity":1 },
                     { "name":"orange", "quantity":2 },
-                    { "name":"pear", "quantity":1 }'
+                    { "name":"pear", "quantity":1 }
                 }}
        
