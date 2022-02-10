@@ -23,4 +23,4 @@ jobs:
           echo "${{ env.Mona }}"
         env:
           First_Name: Mona
-          Mona: format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat')
+          Mona: ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat') }}
