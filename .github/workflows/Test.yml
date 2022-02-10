@@ -20,6 +20,6 @@ jobs:
         if: ${{ env.DAY_OF_WEEK == 'Monday' }}
         run: |
           echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
-          format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat')
+          echo "format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat')"
         env:
           First_Name: Mona
