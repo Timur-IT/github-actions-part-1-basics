@@ -21,7 +21,6 @@ jobs:
         run: |
           echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
           echo "${{ env.Mona }}"
-          echo "${{ fromJSON(greeting_job) }}"
         env:
           First_Name: Mona
           Mona: ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat') }}
