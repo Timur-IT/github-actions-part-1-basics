@@ -24,3 +24,5 @@ jobs:
         env:
           First_Name: Mona
           Mona: ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat') }}
+      - name: The job has succeeded
+        if: ${{ success() }}
