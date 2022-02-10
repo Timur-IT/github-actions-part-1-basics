@@ -21,7 +21,7 @@ jobs:
         run: |
           echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
           echo "${{ env.Mona }}"
-          ${{toJSON(greeting_job)}}
+          echo "${{ toJSON(greeting_job) }}"
         env:
           First_Name: Mona
           Mona: ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat') }}
