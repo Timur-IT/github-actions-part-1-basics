@@ -33,9 +33,8 @@ jobs:
           echo "${{ fruits.*.name }}"
         env:
           fruits:
-          [
-            { "name": "apple", "quantity": 1 },
-            { "name": "orange", "quantity": 2 },
-            { "name": "pear", "quantity": 1 }
-          ]  
+               { "name": "apple", "quantity": 1 },
+               { "name": "orange", "quantity": 2 },
+               { "name": "pear", "quantity": 1 }
+                
        
