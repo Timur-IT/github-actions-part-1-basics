@@ -24,7 +24,14 @@ jobs:
           First_Name: Mona    
       - name: The job has succeeded
         if: ${{ success() }}
-        run :  echo "${{ env.Mona }}"
+        run : | 
+           echo "${{ env.Mona }}"
+           echo "${{ fruits.*.name }}"
         env:
           Mona: ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat') }}
+        [
+         { "name": "apple", "quantity": 1 },
+         { "name": "orange", "quantity": 2 },
+         { "name": "pear", "quantity": 1 }
+        ]  
        
