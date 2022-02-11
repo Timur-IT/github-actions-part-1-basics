@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: My first step
-        uses: actions/hello_world@main
+        uses: actions/hello_world@master
         with:
           first_name: Mona
           middle_name: The
