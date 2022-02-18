@@ -19,7 +19,8 @@ jobs:
       - name: "Say Hello Mona it's Monday"
         if: ${{ env.DAY_OF_WEEK == 'Monday' }}
         run: |
-          echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"      
+          echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!" 
+          echo ${{ github.workflow }}-${{ github.ref }}
         env:
           First_Name: Mona    
       - name: The job has succeeded
